@@ -265,4 +265,10 @@ for i,j in l:
 x_back_y_back(x,y)
 GPIO.cleanup()
 lcd_i2c.main(string1="Traversing to",string2 = "Next Location")
-
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(19,GPIO.OUT)
+GPIO.output(19,GPIO.HIGH)
+time.sleep(10)
+GPIO.output(19,GPIO.LOW)
